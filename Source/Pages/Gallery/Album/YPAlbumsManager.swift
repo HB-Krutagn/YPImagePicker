@@ -39,6 +39,7 @@ class YPAlbumsManager {
                         let deviceScale = UIScreen.main.scale
                         let targetSize = CGSize(width: 78*deviceScale, height: 78*deviceScale)
                         let options = PHImageRequestOptions()
+                        options.isNetworkAccessAllowed = true
                         options.isSynchronous = true
                         options.deliveryMode = .opportunistic
                         PHImageManager.default().requestImage(for: first,
